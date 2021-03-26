@@ -2,8 +2,8 @@
 
 #[cfg(feature = "serialization")]
 use serde::{Deserialize, Serialize};
-use std::fmt;
-use std::ops::{Add, AddAssign, Neg, Sub, SubAssign};
+use core::fmt;
+use core::ops::{Add, AddAssign, Neg, Sub, SubAssign};
 
 /// The raw, untyped index. We use a 32-bit integer here for space efficiency,
 /// assuming we won't be working with sources larger than 4GB.

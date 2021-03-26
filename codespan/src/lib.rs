@@ -9,13 +9,18 @@
 //! - **serialization** - Adds `Serialize` and `Deserialize` implementations
 //!   for use with `serde`
 
+#![cfg_attr(not(feature = "std"), no_std)]
+
 #![forbid(unsafe_code)]
 
+#[cfg(feature = "std")]
 mod file;
+
 mod index;
 mod location;
 mod span;
 
+#[cfg(feature = "std")]
 pub use crate::file::{FileId, Files};
 pub use crate::index::{ByteIndex, ByteOffset};
 pub use crate::index::{ColumnIndex, ColumnNumber, ColumnOffset};
