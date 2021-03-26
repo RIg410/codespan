@@ -12,8 +12,8 @@ exclude = ["assets/**"]
 edition = "2018"
 
 [dependencies]
-codespan = { path = "../codespan", version = "0.8.0" } # CODESPAN
-serde = { version = "1", optional = true, features = ["derive"] }
+codespan = { path = "../codespan", version = "0.8.0", features = ["std"] } # CODESPAN
+serde = { version = "1.0.117", default-features = false, optional = true, package = "alt_serde", features = ["derive"] }
 termcolor = "1.0"
 unicode-width = "0.1"
 
